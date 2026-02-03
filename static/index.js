@@ -22,6 +22,12 @@ if (localStorage.getItem('circle') === null) {
 guesses.innerText = "";
 
 socket.emit("reload_values", localStorage.getItem('guesses'));
+
+if ( localStorage.getItem('guesses') === null) {
+            socket.emit("reload_values", localStorage.getItem('guesses'));
+
+        } 
+
 socket.on("reloaded_values", data => {
     console.log(data)
     let array = Object.entries(data["reload_guesses"]);
