@@ -80,6 +80,8 @@ socket.on("accuracy", (data) => {
         value.innerHTML = String(Math.round((array[i][1][0] + Number.EPSILON) * 100) / 100) + "%";
         color.style.backgroundColor = array[i][1][1];
         value.style.backgroundColor = array[i][1][1];
+        localStorage.setItem('circle', array[i][1][1]);
+        circle.style.fill = array[i][1][1];
         guesses.appendChild(color);
         guesses.appendChild(value);
     }
