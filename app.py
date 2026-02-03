@@ -52,6 +52,4 @@ def get_color():
 
 
 
-if __name__ == '__main__':
-    # db.init_app(app)
-    socketio.run(app)
+socketio.init_app(app)
