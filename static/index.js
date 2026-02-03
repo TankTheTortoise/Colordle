@@ -6,7 +6,6 @@ socket.on('connect', function () {
 });
 const input = document.getElementById('guess_input');
 const guesses = document.getElementById('guesses');
-const change_color = document.getElementById("change_color");
 input.focus()
 console.log(localStorage.getItem('guesses'));
 
@@ -69,7 +68,7 @@ function guess() {
 
 }
 
-change_color.onclick = function (){
+function change_color (){
     socket.emit("change_color", {});
 }
 
