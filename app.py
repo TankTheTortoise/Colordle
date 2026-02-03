@@ -52,4 +52,4 @@ def get_color():
 
 
 
-socketio.run(app)
+socketio.run(app, allow_unsafe_werkzeug=True)
