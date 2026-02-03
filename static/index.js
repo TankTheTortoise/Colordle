@@ -9,8 +9,8 @@ const guesses = document.getElementById('guesses');
 input.focus()
 console.log(localStorage.getItem('guesses'));
 const change_color_button = document.createElement("button");
-change_color_button.onClick = change_color;
-change_color_button.innerHTML = "Reset Color";
+change_color_button.onclick = change_color();
+change_color_button.value = "Reset Color";
 
 const circle = document.getElementById('guess_circle');
 if (localStorage.getItem('circle') === null) {
