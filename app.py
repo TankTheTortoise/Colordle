@@ -21,7 +21,7 @@ def hello_world():  # put application's code here
 
 @app.route("/colors")
 def colors():
-    return send_from_directory("", "colors.csv")
+    return send_from_directory("", "static/colors.csv")
 
 # Socketio
 @socketio.on('guess')
