@@ -61,7 +61,7 @@ def color_to_hex(color: str):
     colors_dict["Nombre"] = colors_dict["Nombre"].str.replace(u'\u200b', '')
 
     colors_dict = dict(zip(colors_dict["Nombre"], colors_dict["Cod. Hex."]))
-    print(colors_dict)
+    
     try:
         return colors_dict[color.lower()]
     except KeyError:
