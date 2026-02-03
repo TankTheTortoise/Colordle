@@ -17,7 +17,7 @@ socketio = SocketIO(app)
 # db = SQLAlchemy()
 
 global true_color
-true_color = random.choice(list(pd.read_csv("static/colors.csv")["Nombre"]))
+true_color = random.choice(list(pd.read_csv("static/colors.csv")["Nombre"])).replace(u'\u200b', '')
 print(true_color)
 
 @app.route('/')
