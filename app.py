@@ -53,6 +53,11 @@ def reload_values(data):
 def get_color():
     return true_color
 
+@socketio.on("change_color")
+def change_color(data):
+    true_color = random.choice(list(pd.read_csv("static/colors.csv")["Nombre"])).replace(u'\u200b', '').lower()
+    print(true_color)
+
 
 
 
