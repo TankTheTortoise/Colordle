@@ -21,8 +21,6 @@ if (localStorage.getItem('circle') === null) {
 // On reload
 guesses.innerText = "";
 
-socket.emit("reload_values", localStorage.getItem('guesses'));
-
 if ( !(localStorage.getItem('guesses') === null)) {
             socket.emit("reload_values", localStorage.getItem('guesses'));
 
