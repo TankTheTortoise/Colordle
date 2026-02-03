@@ -56,7 +56,7 @@ def percent_difference(correct_color, color2):
 
 
 def color_to_hex(color: str):
-    colors_dict = pd.read_csv('colors.csv')
+    colors_dict = pd.read_csv('static/colors.csv')
     colors_dict["Nombre"] = colors_dict["Nombre"].str.lower()
     colors_dict["Nombre"] = colors_dict["Nombre"].str.replace(u'\u200b', '')
 

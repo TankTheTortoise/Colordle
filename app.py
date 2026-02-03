@@ -21,7 +21,7 @@ def hello_world():  # put application's code here
 
 @app.route("/colors")
 def colors():
-    return send_from_directory("colors", "colors.csv")
+    return send_from_directory("", "colors.csv")
 
 # Socketio
 @socketio.on('guess')
@@ -51,5 +51,7 @@ def get_color():
 
 
 
-socketio.init_app(app)
-socketio.run(app, allow_unsafe_werkzeug=True, host="0.0.0.0", port=5000)
+
+if __name__ == '__main__':
+    # db.init_app(app)
+    socketio.run(app, host='0.0.0.0')
