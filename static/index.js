@@ -64,6 +64,10 @@ function guess() {
 
 }
 
+function change_color(){
+    socket.emit("change_color");
+}
+
 socket.on("accuracy", (data) => {
 
     guesses.innerText = "";
