@@ -84,6 +84,8 @@ socket.on("accuracy", (data) => {
         circle.style.fill = array[i][1][1];
         guesses.appendChild(color);
         guesses.appendChild(value);
+
+
     }
     console.log(array);
 

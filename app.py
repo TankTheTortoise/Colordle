@@ -37,7 +37,7 @@ def my_event(data):
     for g in previous_guesses:
         if color_to_hex(g) != -1:
             guesses.update({g: (percent_difference(color_to_hex(true_color), color_to_hex(g)), color_to_hex(g))})
-
+    guesses.update({g: (percent_difference(color_to_hex(true_color), color_to_hex(data["guess"])), color_to_hex(data["guess"]))})
     socketio.emit("accuracy", {"guess": guess, "previous_guesses": guesses})
 
 @socketio.on('reload_values')
