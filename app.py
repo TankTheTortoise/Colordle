@@ -52,4 +52,4 @@ def get_color():
 
 
 
-socketio.init_app(app)
+socketio.run(app)
