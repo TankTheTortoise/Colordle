@@ -31,6 +31,7 @@ def colors():
 # Socketio
 @socketio.on('guess')
 def my_event(data):
+    print(data["guess"])
     guess = percent_difference(color_to_hex(true_color), color_to_hex(data["guess"]))
     previous_guesses = data["previous_guesses"]
     guesses = {}
