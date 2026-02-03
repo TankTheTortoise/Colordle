@@ -1,0 +1,92 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="alembic" />
+          <option value="asttokens" />
+          <option value="attrs" />
+          <option value="backcall" />
+          <option value="beautifulsoup4" />
+          <option value="bidict" />
+          <option value="bleach" />
+          <option value="blinker" />
+          <option value="certifi" />
+          <option value="charset-normalizer" />
+          <option value="click" />
+          <option value="decorator" />
+          <option value="defusedxml" />
+          <option value="docopt" />
+          <option value="executing" />
+          <option value="fastjsonschema" />
+          <option value="Flask" />
+          <option value="Flask-Login" />
+          <option value="Flask-Migrate" />
+          <option value="Flask-SocketIO" />
+          <option value="Flask-SQLAlchemy" />
+          <option value="Flask-WTF" />
+          <option value="greenlet" />
+          <option value="h11" />
+          <option value="idna" />
+          <option value="ipython" />
+          <option value="itsdangerous" />
+          <option value="jedi" />
+          <option value="Jinja2" />
+          <option value="jsonschema" />
+          <option value="jsonschema-specifications" />
+          <option value="jupyter_client" />
+          <option value="jupyter_core" />
+          <option value="jupyterlab_pygments" />
+          <option value="Mako" />
+          <option value="MarkupSafe" />
+          <option value="matplotlib-inline" />
+          <option value="mistune" />
+          <option value="nbclient" />
+          <option value="nbconvert" />
+          <option value="nbformat" />
+          <option value="numpy" />
+          <option value="packaging" />
+          <option value="pandas" />
+          <option value="pandocfilters" />
+          <option value="parso" />
+          <option value="pexpect" />
+          <option value="pickleshare" />
+          <option value="platformdirs" />
+          <option value="prompt_toolkit" />
+          <option value="ptyprocess" />
+          <option value="pure_eval" />
+          <option value="Pygments" />
+          <option value="python-dateutil" />
+          <option value="python-engineio" />
+          <option value="python-socketio" />
+          <option value="pytz" />
+          <option value="pyzmq" />
+          <option value="referencing" />
+          <option value="requests" />
+          <option value="rpds-py" />
+          <option value="simple-websocket" />
+          <option value="six" />
+          <option value="soupsieve" />
+          <option value="SQLAlchemy" />
+          <option value="stack-data" />
+          <option value="tinycss2" />
+          <option value="tornado" />
+          <option value="traitlets" />
+          <option value="typing_extensions" />
+          <option value="tzdata" />
+          <option value="urllib3" />
+          <option value="wcwidth" />
+          <option value="webencodings" />
+          <option value="Werkzeug" />
+          <option value="wsproto" />
+          <option value="WTForms" />
+          <option value="yarg" />
+          <option value="gunicorn" />
+          <option value="dnspython" />
+          <option value="eventlet" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
