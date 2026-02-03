@@ -1,4 +1,5 @@
 import json
+import random
 
 import eventlet
 eventlet.monkey_patch()
@@ -16,7 +17,8 @@ socketio = SocketIO(app)
 # db = SQLAlchemy()
 
 global true_color
-true_color = "#FFFFFF"
+true_color = random.choice(list(pd.read_csv("static/colors.csv")["Nombre"]))
+print(true_color)
 
 @app.route('/')
 def hello_world():  # put application's code here
@@ -48,9 +50,9 @@ def reload_values(data):
 
     socketio.emit("reloaded_values", {"reload_guesses": guesses})
 
-@socketio.on("get_color")
+@app.route("/truecolor")
 def get_color():
-    socketio.emit('color', true_color)
+    return true_color
 
 
 
