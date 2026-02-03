@@ -8,6 +8,8 @@ const input = document.getElementById('guess_input');
 const guesses = document.getElementById('guesses');
 input.focus()
 console.log(localStorage.getItem('guesses'));
+const change_color_button = document.createElement(button);
+change_color_button.onClick = change_color;
 
 const circle = document.getElementById('guess_circle');
 if (localStorage.getItem('circle') === null) {
