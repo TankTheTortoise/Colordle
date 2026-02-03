@@ -17,7 +17,7 @@ socketio = SocketIO(app)
 # db = SQLAlchemy()
 
 global true_color
-true_color = random.choice(list(pd.read_csv("static/colors.csv")["Nombre"])).replace(u'\u200b', '')
+true_color = random.choice(list(pd.read_csv("static/colors.csv")["Nombre"])).replace(u'\u200b', '').lower()
 print(true_color)
 
 @app.route('/')
@@ -31,12 +31,12 @@ def colors():
 # Socketio
 @socketio.on('guess')
 def my_event(data):
-    guess = percent_difference(true_color, color_to_hex(data["guess"]))
+    guess = percent_difference(color_to_hex(true_color), color_to_hex(data["guess"]))
     previous_guesses = data["previous_guesses"]
     guesses = {}
     for g in previous_guesses:
         if color_to_hex(g) != -1:
-            guesses.update({g: (percent_difference(true_color, color_to_hex(g)), color_to_hex(g))})
+            guesses.update({g: (percent_difference(color_to_hex(true_color), color_to_hex(g)), color_to_hex(g))})
 
     socketio.emit("accuracy", {"guess": guess, "previous_guesses": guesses})
 
@@ -46,7 +46,7 @@ def reload_values(data):
     guesses = {}
     for g in json.loads(data)["guesses"]:
         if color_to_hex(g) != -1:
-            guesses.update({g: (percent_difference(true_color, color_to_hex(g)), color_to_hex(g))})
+            guesses.update({g: (percent_difference(color_to_hex(true_color), color_to_hex(g)), color_to_hex(g))})
 
     socketio.emit("reloaded_values", {"reload_guesses": guesses})
 
