@@ -42,7 +42,6 @@ def my_event(data):
 
 @socketio.on('reload_values')
 def reload_values(data):
-    print(json.loads(data))
     guesses = {}
     for g in json.loads(data)["guesses"]:
         if color_to_hex(g) != -1:
