@@ -23,7 +23,7 @@ guesses.innerText = "";
 
 socket.emit("reload_values", localStorage.getItem('guesses'));
 
-if ( localStorage.getItem('guesses') === null) {
+if ( !(localStorage.getItem('guesses') === null)) {
             socket.emit("reload_values", localStorage.getItem('guesses'));
 
         } 
