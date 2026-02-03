@@ -11,7 +11,7 @@ console.log(localStorage.getItem('guesses'));
 const change_color_button = document.createElement("button");
 change_color_button.onclick = change_color();
 change_color_button.textContent = "Reset Color";
-document.getElementById("edge").addChild(change_color_button);
+document.getElementById("edge").appendChild(change_color_button);
 
 const circle = document.getElementById('guess_circle');
 if (localStorage.getItem('circle') === null) {
