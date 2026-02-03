@@ -52,4 +52,4 @@ def get_color():
 
 
 socketio.init_app(app)
-socketio.run(app, allow_unsafe_werkzeug=True, port=0000)
+socketio.run(app, allow_unsafe_werkzeug=True, host="0.0.0.0", port=5000)
